@@ -1,7 +1,8 @@
 # Terraform
 
 1. `terraform init` Pulls down the specific providers that we need for project you can always see the providers in the .terraform directory, under plugins and there is executable for it. .terraform directory should not be committed to the git repository.
-```provider "google" {
+```
+provider "google" {
   credentials = "${file("../account.json")}"
   project = "testsweta567"
   region = "us-west1"
@@ -29,7 +30,8 @@ resource "aws_vpc" "environment-example-two" {
   tags {
     Name = "terraform-aws-vpc-example-two"
   }
-}```
+}
+```
 
 2. `terraform plan` Shows diff between existing infrastructure and what state we wanted to be in based on our configuration.
 3. `terraform apply` runs the diff.
@@ -74,9 +76,3 @@ Steps of pipeline: you can automate all the below steps in your pipeline.
 6. Terraform : plan
 7. Terraform : Apply - auto-approve
 we have to login into the portal, we have to find different ways to allow authentication into our portal to deploy those terraform.
-
-
-
-
-
-
