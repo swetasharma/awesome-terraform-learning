@@ -2,7 +2,7 @@
 
 terraform init : Pulls down the specific providers that we need for project you can always see the providers in the .terraform directory, under plugins and there is executable for it.
 ## How to secure deployments
-- We canot deploy form our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
+- We cannot deploy from our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
 we need to put out state file into storage account and lock down security case to it and access to it
 There should be a script file which will tell state file not to write locally write to a storage account
 *state file is very important keep safe*
