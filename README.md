@@ -1,7 +1,5 @@
 # Terraform
 
-Everything works straight through a command line tool,
-which mean I can easily easily embed this to my CI/CD pipeline.
 terraform init : Pulls down the specific providers that we need for project you can always see the providers in the .terraform directory, under plugins and there is executable for it.
 ## How to secure deployments
 - We canot deploy form our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
@@ -26,6 +24,8 @@ infrastructure and we have three different state files
 
 
 ## How to use terraform in your pipelines
+Everything works straight through a command line tool,
+which mean I can easily easily embed this to my CI/CD pipeline.
 If you have infrastructure as code written in terraform to put it into the pipeline, run terraform tasks and when that done you deploy your application using infrastructure.
 provision infrastructure thourgh my pipeline using terraform.
 we can deploy on prem, we can deploy other cloud, we can deploy microsoft azure with ease
