@@ -24,3 +24,27 @@ add it module by module and take it away module by module
 DO they have same environments for dev test and production? Manage them seperatly but have the same
 infrastructure and we have three different state files
 The power of terraform lies in variables, modules and workspaces
+
+
+How to use terraform in your pipelines:
+If you have infrastructure as code written in terraform to put it into the pipeline, run terraform tasks and when that d0ne you deploy your application using infrastructure
+provision infrastructure thourgh my pipeline using terraform
+we can deploy on prem, we can deploy other cloud, we can deplot microsoft azure with ease
+Everything in pipeline starts from the build. I checkin code and cick of the build.
+changes to code -> cick of the build cycle -> 
+In release pipeline it will change the infrastructure first and then deploy the code.
+Steps of pipeline: you can automate all the below steps in your pipeline.
+1. Create storage account and the key which wiil store terraform state file.
+2. We need to secure the storage account keys in key vault. It will get the storage key and put them in key vault. you dont have to release the key to anyone, secured and it automates the whole thing
+3. Replace token in terraform file.
+4. Install Terraform: Remember when your terraform version change your code has to change
+5. Terraform : init
+6. Terraform : plan
+7. Terraform : Apply - auto-approve
+we have to login into the portal, we have to fing different ways to allow authentication into our portal to deploy those terraform.
+
+
+
+
+
+
