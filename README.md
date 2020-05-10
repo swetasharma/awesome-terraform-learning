@@ -18,6 +18,7 @@ provider "azurerm" {
   client_secret = "2"
   tenant_id = "3"
 }
+
 resource "google_compute_network" "our_development_network" {
   name = "devnetwork"
   auto_create_subnetworks = true
