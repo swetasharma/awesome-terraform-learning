@@ -63,6 +63,7 @@ resource "aws_security_group" "subnetsecurity" {
 3. `terraform apply` runs the diff.
 4. `terraform validate`
 5. `terraform format`
+6. `terraform state`
 
 ## How to secure deployments
 - We cannot deploy from our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
