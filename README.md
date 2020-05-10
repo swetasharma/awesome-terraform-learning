@@ -1,6 +1,36 @@
 # Terraform
 
-1. `terraform init` Pulls down the specific providers that we need for project you can always see the providers in the .terraform directory, under plugins and there is executable for it.
+1. `terraform init` Pulls down the specific providers that we need for project you can always see the providers in the .terraform directory, under plugins and there is executable for it. .terraform directory should not be committed to the git repository.
+```provider "google" {
+  credentials = "${file("../account.json")}"
+  project = "testsweta567"
+  region = "us-west1"
+}
+
+provider "aws" {
+  region = "us-west-2"
+}
+
+provider "azurerm" {
+  subscription_id = "0"
+  client_id = "1"
+  client_secret = "2"
+  tenant_id = "3"
+}
+resource "google_compute_network" "our_development_network" {
+  name = "devnetwork"
+  auto_create_subnetworks = true
+}
+
+resource "aws_vpc" "environment-example-two" {
+  cidr_block = "10.0.0.0/16"
+  enable_dns_hostnames = true
+  enable_dns_support = true
+  tags {
+    Name = "terraform-aws-vpc-example-two"
+  }
+}```
+
 2. `terraform plan` Shows diff between existing infrastructure and what state we wanted to be in based on our configuration.
 3. `terraform apply` runs the diff.
 
