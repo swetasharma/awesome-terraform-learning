@@ -61,6 +61,8 @@ resource "aws_security_group" "subnetsecurity" {
 
 2. `terraform plan` Shows diff between existing infrastructure and what state we wanted to be in based on our configuration.
 3. `terraform apply` runs the diff.
+4. `terraform validate`
+5. `terraform format`
 
 ## How to secure deployments
 - We cannot deploy from our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
