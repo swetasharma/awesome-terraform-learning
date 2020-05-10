@@ -1,4 +1,4 @@
-# terraform
+# Terraform
 
 Everything works straight through a command line tool,
 which mean I can easily easily embed this to my CI/CD pipeline
