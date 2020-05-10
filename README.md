@@ -64,6 +64,7 @@ resource "aws_security_group" "subnetsecurity" {
 4. `terraform validate`
 5. `terraform format`
 6. `terraform state`
+7. `terraform graph` for this command install graphviz, this is great little tool to see how everything is literally related to each other with a graphical context.
 
 ## How to secure deployments
 - We cannot deploy from our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
