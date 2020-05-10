@@ -1,8 +1,8 @@
 # Terraform
 
-`terraform init` : Pulls down the specific providers that we need for project you can always see the providers in the .terraform directory, under plugins and there is executable for it.
-`terraform plan` : Shows diff between existing infrastructure and what state we wanted to be in based on our configuration.
-`terraform apply` : runs the diff.
+1. `terraform init` Pulls down the specific providers that we need for project you can always see the providers in the .terraform directory, under plugins and there is executable for it.
+2. `terraform plan` Shows diff between existing infrastructure and what state we wanted to be in based on our configuration.
+3. `terraform apply` runs the diff.
 
 ## How to secure deployments
 - We cannot deploy from our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
