@@ -3,7 +3,7 @@
 Everything works straight through a command line tool,
 which mean I can easily easily embed this to my CI/CD pipeline
 ## How to secure deployments
-we canot deply form our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
+- We canot deply form our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
 we need to put out state file into storage account and lock down security case to it and access to it
 There should be a script file which will tell state file not to write locally write to a storage account
 *state file is very important keep safe*
