@@ -63,15 +63,14 @@ resource "aws_security_group" "subnetsecurity" {
 8. `terraform output` Works with pulling an output variable and returning the assigned value to that output variable based on the state terraform import
 
 ## How to secure deployments
-- We cannot deploy from our machine there should be some pipeline which should take of this we need to secure that state file as we need to secure our cloud.
-we need to put out state file into storage account and lock down security case to it and access to it
-There should be a script file which will tell state file not to write locally write to a storage account
-*state file is very important keep safe*
+- We cannot deploy from our machine there should be some pipeline which should take of this we need to secure that state file as we need  to secure our cloud.
+- we need to put out state file into storage account and lock down security case to it and access to it
+- There should be a script file which will tell state file not to write locally write to a storage account *state file is very important keep safe*
 terraform.tfvars
-State file is gonna sit inside azure storage, we also have instance of key vault.
-The key vault is securing my secrets for the storage accounts.
-We take the key that we get when we create storage account and we insert into key vault and keep your cloud secure. It is not open and available to anyone in the organizations 
-They have access to Azure however they dont have access to that resource
+- State file is gonna sit inside azure storage, we also have instance of key vault.
+- The key vault is securing my secrets for the storage accounts.
+- We take the key that we get when we create storage account and we insert into key vault and keep your cloud secure. It is not open and available to anyone in the organizations 
+- They have access to Azure however they dont have access to that resource
 you can lock it down except for the processes and person needs to.
 ## Terraform modules deploying reusable code
 The power of terraform lies in variables, modules and workspaces.
