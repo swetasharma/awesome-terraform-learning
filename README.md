@@ -73,26 +73,24 @@ terraform.tfvars
 - They have access to Azure however they dont have access to that resource
 you can lock it down except for the processes and person needs to.
 ## Terraform modules deploying reusable code
-The power of terraform lies in variables, modules and workspaces.
-you can think of a module as a seperate funtion or deploybale unit because main.tf file gets very long amd complex for big environments
-it meakes it repeatable and redeployable not just one data center one environment, multiple environment
-it is very much like calling a method. Call module in this case and tell terraform to deploy that
-We add resource to the module. Add it module by module and take it away module by module
-Do they have same environments for dev test and production? Manage them seperatly but have the same
-infrastructure and we have three different state files
+- The power of terraform lies in variables, modules and workspaces.
+- you can think of a module as a seperate funtion or deploybale unit because main.tf file gets very long amd complex for big environments
+- it meakes it repeatable and redeployable not just one data center one environment, multiple environment
+- it is very much like calling a method. Call module in this case and tell terraform to deploy that
+- We add resource to the module. Add it module by module and take it away module by module
+- Do they have same environments for dev test and production? Manage them seperatly but have the same infrastructure and we have three different state files
 
 
 
 ## How to use terraform in your pipelines
-Everything works straight through a command line tool,
-which mean I can easily easily embed this to my CI/CD pipeline.
-If you have infrastructure as code written in terraform to put it into the pipeline, run terraform tasks and when that done you deploy your application using infrastructure.
-provision infrastructure thourgh my pipeline using terraform.
-we can deploy on prem, we can deploy other cloud, we can deploy microsoft azure with ease
-Everything in pipeline starts from the build. I checkin code and cick off the build.
-changes to code -> cick of the build cycle -> 
-In release pipeline it will change the infrastructure first and then deploy the code.
-Steps of pipeline: you can automate all the below steps in your pipeline.
+- Everything works straight through a command line tool, which mean I can easily easily embed this to my CI/CD pipeline.
+- If you have infrastructure as code written in terraform to put it into the pipeline, run terraform tasks and when that done you deploy your application using infrastructure.
+- provision infrastructure thourgh my pipeline using terraform.
+- we can deploy on prem, we can deploy other cloud, we can deploy microsoft azure with ease
+- Everything in pipeline starts from the build. I checkin code and cick off the build.
+- changes to code -> cick of the build cycle -> 
+- In release pipeline it will change the infrastructure first and then deploy the code.
+- Steps of pipeline: you can automate all the below steps in your pipeline.
 1. Create storage account and the key which wiil store terraform state file.
 2. We need to secure the storage account keys in key vault. It will get the storage key and put them in key vault. you dont have to release the key to anyone, secured and it automates the whole thing
 3. Replace token in terraform file.
@@ -100,4 +98,4 @@ Steps of pipeline: you can automate all the below steps in your pipeline.
 5. Terraform : init
 6. Terraform : plan
 7. Terraform : Apply - auto-approve
-we have to login into the portal, we have to find different ways to allow authentication into our portal to deploy those terraform.
+- we have to login into the portal, we have to find different ways to allow authentication into our portal to deploy those terraform.
