@@ -89,8 +89,8 @@ resource "aws_security_group" "subnetsecurity" {
 1. Create storage account which wiil store terraform state file.
 2. We need to secure the storage account keys in key vault. It will get the storage key and put them in key vault. you dont have to release the key to anyone, secured and it automates the whole thing.
 3. Replace token in terraform file.
-4. Install Terraform: Remember when your terraform version change your code has to change
-5. Terraform : init
-6. Terraform : plan
-7. Terraform : Apply - auto-approve
+4. Install Terraform : Remember when your terraform version change your code has to change
+5. ```Terraform init```
+6. ```Terraform plan```
+7. ```Terraform : Apply - auto-approve```
 - We have to login into the portal, we have to find different ways to allow authentication into our portal to deploy those terraform.
