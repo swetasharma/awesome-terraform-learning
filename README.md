@@ -70,6 +70,7 @@ resource "aws_security_group" "subnetsecurity" {
 - State file is gonna sit inside azure storage, we also have instance of key vault.
 - The key vault is securing my secrets for the storage accounts.
 - We take the key that we get when we create storage account and we insert into key vault and keep your cloud secure. It is not open and available to anyone in the organizations. They have access to Azure however they dont have access to that resource, you can lock it down except for the processes and person needs to.
+- store your state in a secured location such as an S3 bucket where the state files are encrypted at rest.You store your Terraform configs in a git repo and the state in a remote backend
 
 ## Terraform modules deploying reusable code
 - The power of terraform lies in variables, modules and workspaces.
