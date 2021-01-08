@@ -1,6 +1,6 @@
 provider "aws" {
   profile = "default"
-  region = "us-west-2"
+  region = "eu-central-1"
 }
 
 resource "aws_s3_bucket" "tf_s3_bucket"{

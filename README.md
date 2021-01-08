@@ -95,3 +95,41 @@ resource "aws_security_group" "subnetsecurity" {
 6. ```Terraform plan```
 7. ```Terraform : Apply - auto-approve```
 - We have to login into the portal, we have to find different ways to allow authentication into our portal to deploy those terraform.
+
+
+
+
+
+### Terraform Commands:
+
+IAM - Create Users: this is the account which terraform will use to call aws / usrename and password for the user in terms  of api
+build config file based on csv file we downloaded
+code to create s3 bucket
+download and install the additional terraform plugin it needs for working with aws
+
+
+Terraform is infrastructure management tool
+code state plan
+
+terraform uses provider to apply the plan
+directed acrylic graph
+s3->dns->ec2
+
+1. `terraform plan --help`
+2. `terraform plan`
+3. `terraform plan -destroy`
+4. `terraform plan -destroy -out=example.plan`
+5. `terraform show example.plan`
+6. `terraform.tfstate  - all the infrastructure`
+7. `terraform state`
+8. `terraform state show aws_security_group.prod_web`
+9. `terraform show -json`
+10. `terraform graph`
+
+
+aws security group can function as a firewall
+
+Terraform style:
+2 spaces rather than a tab
+component environment region and whatever descriptor make sense
+networking-prod-us-west-aws-
